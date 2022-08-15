@@ -14,11 +14,6 @@ wsl --set-default-version 2
 # Install Dapr CLI
 powershell -Command "iwr -useb https://raw.githubusercontent.com/dapr/cli/master/install/install.ps1 | iex"
 
-# initialize Dapr
-dapr init
-
-[Environment]::SetEnvironmentVariable("KUBECONFIG", $HOME + "\.kube\config", [EnvironmentVariableTarget]::Machine)
-
 # Install chocolatey
 https://chocolatey.org/install
 
@@ -32,6 +27,12 @@ minikube start --driver=docker
 #--driver=hyperv
 #--driver=docker
 #--driver=virtualbox
+
+
+[Environment]::SetEnvironmentVariable("KUBECONFIG", $HOME + "\.kube\config", [EnvironmentVariableTarget]::Machine)
+
+# initialize Dapr
+dapr init
 
 run command from Deploy manually or run powershell script
 
