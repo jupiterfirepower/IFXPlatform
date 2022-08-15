@@ -11,13 +11,7 @@ type GetTenantQuery =
    }
    interface IRequest<TenantEntity>
 
-
 module Queries = 
-
-      (*type GetTenantQuery() = 
-           interface IRequest<TenantEntity>
-
-           member val Gid = Guid.Empty with get, set*)
 
       type GetTenantsQuery() = 
            interface IRequest<seq<TenantEntity>>

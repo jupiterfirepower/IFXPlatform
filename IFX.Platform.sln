@@ -34,7 +34,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deploy", "Deploy", "{EE4F37
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateways", "Gateways", "{BC314484-7DE7-4A24-9E76-C4AF4F100973}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "IX.Platform.Gateways.Admin", "src\Gateways\IX.Platform.Gateways.Admin\IX.Platform.Gateways.Admin.fsproj", "{0E1FC76B-B4AB-4711-975B-9CC28503EE94}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "IX.Platform.Gateways.Admin", "src\Gateways\IX.Platform.Gateways.Admin\IX.Platform.Gateways.Admin.fsproj", "{0E1FC76B-B4AB-4711-975B-9CC28503EE94}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E8EA7D21-212D-48BD-B42D-87C2726742C1}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.override.yml = docker-compose.override.yml
+		docker-compose.yml = docker-compose.yml
+		Readme.txt = Readme.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

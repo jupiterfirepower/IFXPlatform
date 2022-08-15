@@ -1,12 +1,8 @@
 ﻿namespace IX.Platform.Microservice.Tenant.Controllers
 
 open System
-//open System.Collections.Generic
-//open System.Linq
-//open System.Threading.Tasks
 open Microsoft.AspNetCore.Mvc
 open Microsoft.Extensions.Logging
-//open IX.Platform.Microservice.Tenant
 open IX.Platform.Shared.Core.Controllers
 open IX.Platform.Core.Tenant.Contracts.Queries
 open IX.Platform.Core.Tenant.Contracts.Commands
