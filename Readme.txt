@@ -28,13 +28,12 @@ minikube start --driver=docker
 #--driver=docker
 #--driver=virtualbox
 
-
 [Environment]::SetEnvironmentVariable("KUBECONFIG", $HOME + "\.kube\config", [EnvironmentVariableTarget]::Machine)
 
 # initialize Dapr
 dapr init
 
-run command from Deploy manually or run powershell script
+# run command from Deploy manually or run powershell script
 
 # run localy tenant microservice 
 dapr run --app-id "tenant-microservice" --app-port "5000" --dapr-http-port "5010" -- dotnet run --project ./IX.Platform.Microservice.Tenant/IX.Platform.Microservice.Tenant.fsproj --urls="http://+:5000"
