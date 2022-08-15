@@ -21,7 +21,6 @@ type TenantController (logger : ILogger<TenantController>) =
 
     [<HttpGet("GetById")>]
     member _.GetById([<FromQuery>] Id: Guid, [<FromServices>] daprClient : DaprClient) =
-
         let client = DaprClient.CreateInvokeHttpClient("tenant-microservice")
         let response =  client.GetFromJsonAsync<RootResponse>("/api/Tenant/GetById?Gid=" + Id.ToString("D"))
 
