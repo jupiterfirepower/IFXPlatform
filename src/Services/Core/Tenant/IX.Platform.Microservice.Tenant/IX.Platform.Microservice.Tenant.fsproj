@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <UserSecretsId>b3bdcbb1-0d85-4f9f-aaab-b40e94de7bc1</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Remove="D:\PROJECTS\F#PRG\IX-Platform\src\Services\Core\Tenant\IX.Platform.Microservice.Tenant\stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="DesignTimeServices.fs" />
+    <Compile Include="Controllers\TenantController.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Dockerfile" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapr.AspNetCore" Version="1.8.0" />
+    <PackageReference Include="EntityFrameworkCore.FSharp" Version="6.0.7" />
+    <PackageReference Include="MediatR" Version="10.0.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.8" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Shared\IX.Platform.Shared.Core\IX.Platform.Shared.Core.fsproj" />
+    <ProjectReference Include="..\..\..\..\Shared\IX.Platform.Shared.Data\IX.Platform.Shared.Data.fsproj" />
+    <ProjectReference Include="..\IX.Platform.Core.Tenant.Application\IX.Platform.Core.Tenant.Application.fsproj" />
+    <ProjectReference Include="..\IX.Platform.Core.Tenant.Contracts\IX.Platform.Core.Tenant.Contracts.fsproj" />
+    <ProjectReference Include="..\IX.Platform.Core.Tenant.Infrastucture\IX.Platform.Core.Tenant.Infrastucture.fsproj" />
+  </ItemGroup>
+
+</Project>

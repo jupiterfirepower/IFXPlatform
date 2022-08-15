@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "Qc0cCv1Z33RBaeWJmpkd94CSGFFsVuEXBsZ3k9/7cgM=",
+  "Source": "IX.Platform.Core.Tenant",
+  "BasePath": "_content/IX.Platform.Core.Tenant",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

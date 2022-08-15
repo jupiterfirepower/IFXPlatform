@@ -1,0 +1,15 @@
+D:\PROJECTS\F#PRG\IX-Platform\src\Services\Core\Tenant\IX.Platform.Core.Tenant.Contracts\obj\Debug\net6.0\IX.Platform.Core.Tenant.Contracts.fsproj.AssemblyReference.cache
+D:\PROJECTS\F#PRG\IX-Platform\src\Services\Core\Tenant\IX.Platform.Core.Tenant.Contracts\obj\Debug\net6.0\IX.Platform.Core.Tenant.Contracts.AssemblyInfoInputs.cache
+D:\PROJECTS\F#PRG\IX-Platform\src\Services\Core\Tenant\IX.Platform.Core.Tenant.Contracts\obj\Debug\net6.0\IX.Platform.Core.Tenant.Contracts.AssemblyInfo.fs
+D:\PROJECTS\F#PRG\IX-Platform\src\Services\Core\Tenant\IX.Platform.Core.Tenant.Contracts\obj\Debug\net6.0\IX.Platform.Core.Tenant.Contracts.fsproj.CoreCompileInputs.cache
+D:\PROJECTS\F#PRG\IX-Platform\src\Services\Core\Tenant\IX.Platform.Core.Tenant.Contracts\bin\Debug\net6.0\IX.Platform.Core.Tenant.Contracts.deps.json
+D:\PROJECTS\F#PRG\IX-Platform\src\Services\Core\Tenant\IX.Platform.Core.Tenant.Contracts\bin\Debug\net6.0\IX.Platform.Core.Tenant.Contracts.dll
+D:\PROJECTS\F#PRG\IX-Platform\src\Services\Core\Tenant\IX.Platform.Core.Tenant.Contracts\bin\Debug\net6.0\IX.Platform.Core.Tenant.Contracts.pdb
+D:\PROJECTS\F#PRG\IX-Platform\src\Services\Core\Tenant\IX.Platform.Core.Tenant.Contracts\bin\Debug\net6.0\IX.Platform.Core.Tenant.Contracts.xml
+D:\PROJECTS\F#PRG\IX-Platform\src\Services\Core\Tenant\IX.Platform.Core.Tenant.Contracts\obj\Debug\net6.0\IX.Platform.Core.Tenant.Contracts.dll
+D:\PROJECTS\F#PRG\IX-Platform\src\Services\Core\Tenant\IX.Platform.Core.Tenant.Contracts\obj\Debug\net6.0\IX.Platform.Core.Tenant.Contracts.xml
+D:\PROJECTS\F#PRG\IX-Platform\src\Services\Core\Tenant\IX.Platform.Core.Tenant.Contracts\obj\Debug\net6.0\IX.Platform.Core.Tenant.Contracts.pdb
+D:\PROJECTS\F#PRG\IX-Platform\src\Services\Core\Tenant\IX.Platform.Core.Tenant.Contracts\bin\Debug\net6.0\IX.Platform.Shared.Core.dll
+D:\PROJECTS\F#PRG\IX-Platform\src\Services\Core\Tenant\IX.Platform.Core.Tenant.Contracts\bin\Debug\net6.0\IX.Platform.Shared.Core.pdb
+D:\PROJECTS\F#PRG\IX-Platform\src\Services\Core\Tenant\IX.Platform.Core.Tenant.Contracts\bin\Debug\net6.0\IX.Platform.Shared.Core.xml
+D:\PROJECTS\F#PRG\IX-Platform\src\Services\Core\Tenant\IX.Platform.Core.Tenant.Contracts\obj\Debug\net6.0\IX.Platform.Core.Tenant.Contracts.fsproj.CopyComplete

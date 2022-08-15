@@ -1,0 +1,90 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32804.467
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{6D0BBBBC-9309-46B0-BB09-3271B4140321}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{8CAABCF6-F108-4429-AC30-7182937F2BA0}"
+EndProject
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "IX.Platform.Shared.Core", "src\Shared\IX.Platform.Shared.Core\IX.Platform.Shared.Core.fsproj", "{F12C2750-A6DE-4AF8-9053-4641ED90943A}"
+EndProject
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "IX.Platform.Shared.Data", "src\Shared\IX.Platform.Shared.Data\IX.Platform.Shared.Data.fsproj", "{0F049041-B048-4C00-8F3B-2F2BA5887DD9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tenant", "Tenant", "{5F3C013C-9B07-4AC2-BDD8-D45E8D7E46FC}"
+EndProject
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "IX.Platform.Core.Tenant.Application", "src\Services\Core\Tenant\IX.Platform.Core.Tenant.Application\IX.Platform.Core.Tenant.Application.fsproj", "{23AF6406-F55D-4F72-BBB4-78BE565EDAF0}"
+EndProject
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "IX.Platform.Core.Tenant.Contracts", "src\Services\Core\Tenant\IX.Platform.Core.Tenant.Contracts\IX.Platform.Core.Tenant.Contracts.fsproj", "{FD4F5D97-00A0-4DEC-BA04-FC1C31B1977E}"
+EndProject
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "IX.Platform.Core.Tenant.Infrastucture", "src\Services\Core\Tenant\IX.Platform.Core.Tenant.Infrastucture\IX.Platform.Core.Tenant.Infrastucture.fsproj", "{4C59CFE0-1BA0-424D-9236-3BA71D5F3047}"
+EndProject
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "IX.Platform.Microservice.Tenant", "src\Services\Core\Tenant\IX.Platform.Microservice.Tenant\IX.Platform.Microservice.Tenant.fsproj", "{0A51143D-2E92-4CD1-B07D-F26614EC4CD5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deploy", "Deploy", "{EE4F3709-03AB-433D-B7AD-DBA5CCAFCC5B}"
+	ProjectSection(SolutionItems) = preProject
+		Deploy\configuration-open-telemetry.yaml = Deploy\configuration-open-telemetry.yaml
+		Deploy\configuration-zipkin.yaml = Deploy\configuration-zipkin.yaml
+		Deploy\deploy-dapr.ps1 = Deploy\deploy-dapr.ps1
+		Deploy\deploy-open-telemetry.ps1 = Deploy\deploy-open-telemetry.ps1
+		Deploy\deploy-zipkin.ps1 = Deploy\deploy-zipkin.ps1
+		Deploy\open-telemetry-collector.yaml = Deploy\open-telemetry-collector.yaml
+		Deploy\zipkin.yaml = Deploy\zipkin.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateways", "Gateways", "{BC314484-7DE7-4A24-9E76-C4AF4F100973}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "IX.Platform.Gateways.Admin", "src\Gateways\IX.Platform.Gateways.Admin\IX.Platform.Gateways.Admin.fsproj", "{0E1FC76B-B4AB-4711-975B-9CC28503EE94}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F12C2750-A6DE-4AF8-9053-4641ED90943A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F12C2750-A6DE-4AF8-9053-4641ED90943A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F12C2750-A6DE-4AF8-9053-4641ED90943A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F12C2750-A6DE-4AF8-9053-4641ED90943A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F049041-B048-4C00-8F3B-2F2BA5887DD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F049041-B048-4C00-8F3B-2F2BA5887DD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F049041-B048-4C00-8F3B-2F2BA5887DD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F049041-B048-4C00-8F3B-2F2BA5887DD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23AF6406-F55D-4F72-BBB4-78BE565EDAF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23AF6406-F55D-4F72-BBB4-78BE565EDAF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23AF6406-F55D-4F72-BBB4-78BE565EDAF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23AF6406-F55D-4F72-BBB4-78BE565EDAF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD4F5D97-00A0-4DEC-BA04-FC1C31B1977E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD4F5D97-00A0-4DEC-BA04-FC1C31B1977E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD4F5D97-00A0-4DEC-BA04-FC1C31B1977E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD4F5D97-00A0-4DEC-BA04-FC1C31B1977E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C59CFE0-1BA0-424D-9236-3BA71D5F3047}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C59CFE0-1BA0-424D-9236-3BA71D5F3047}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C59CFE0-1BA0-424D-9236-3BA71D5F3047}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C59CFE0-1BA0-424D-9236-3BA71D5F3047}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A51143D-2E92-4CD1-B07D-F26614EC4CD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A51143D-2E92-4CD1-B07D-F26614EC4CD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A51143D-2E92-4CD1-B07D-F26614EC4CD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A51143D-2E92-4CD1-B07D-F26614EC4CD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E1FC76B-B4AB-4711-975B-9CC28503EE94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E1FC76B-B4AB-4711-975B-9CC28503EE94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E1FC76B-B4AB-4711-975B-9CC28503EE94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E1FC76B-B4AB-4711-975B-9CC28503EE94}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F12C2750-A6DE-4AF8-9053-4641ED90943A} = {8CAABCF6-F108-4429-AC30-7182937F2BA0}
+		{0F049041-B048-4C00-8F3B-2F2BA5887DD9} = {8CAABCF6-F108-4429-AC30-7182937F2BA0}
+		{5F3C013C-9B07-4AC2-BDD8-D45E8D7E46FC} = {6D0BBBBC-9309-46B0-BB09-3271B4140321}
+		{23AF6406-F55D-4F72-BBB4-78BE565EDAF0} = {5F3C013C-9B07-4AC2-BDD8-D45E8D7E46FC}
+		{FD4F5D97-00A0-4DEC-BA04-FC1C31B1977E} = {5F3C013C-9B07-4AC2-BDD8-D45E8D7E46FC}
+		{4C59CFE0-1BA0-424D-9236-3BA71D5F3047} = {5F3C013C-9B07-4AC2-BDD8-D45E8D7E46FC}
+		{0A51143D-2E92-4CD1-B07D-F26614EC4CD5} = {5F3C013C-9B07-4AC2-BDD8-D45E8D7E46FC}
+		{0E1FC76B-B4AB-4711-975B-9CC28503EE94} = {BC314484-7DE7-4A24-9E76-C4AF4F100973}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E749738F-9F23-4FFB-8F26-B4A5EB2E7072}
+	EndGlobalSection
+EndGlobal

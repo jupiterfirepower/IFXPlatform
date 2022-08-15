@@ -1,0 +1,10 @@
+<Project>  
+    <PropertyGroup>
+        <CodeAnalysisRuleSet>$(SolutionDir)ix.platform.ruleset</CodeAnalysisRuleSet>
+        <Nullable>false</Nullable>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="StyleCop.Analyzers" Version="1.1.118" PrivateAssets="all" />
+        <AdditionalFiles Include="$(SolutionDir)stylecop.json" Link="stylecop.json" />
+    </ItemGroup>
+</Project>

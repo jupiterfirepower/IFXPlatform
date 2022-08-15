@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "NF9V2Pb/DRcgRPOQEW6ut+CyfzqvyNosxJsPYfhdwOk=",
+  "Source": "IX.Platform.Gateways.Admin",
+  "BasePath": "_content/IX.Platform.Gateways.Admin",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

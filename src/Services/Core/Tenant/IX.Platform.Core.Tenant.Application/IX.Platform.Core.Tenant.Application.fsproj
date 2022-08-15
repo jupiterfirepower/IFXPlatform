@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Remove="D:\PROJECTS\F#PRG\IX-Platform\src\Services\Core\Tenant\IX.Platform.Microservice.Tenant\stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="CommandHandlers\TenantCommandsHandlers.fs" />
+    <Compile Include="Queries\GetTenantsQueriesHandlers .fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="10.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Shared\IX.Platform.Shared.Core\IX.Platform.Shared.Core.fsproj" />
+    <ProjectReference Include="..\IX.Platform.Core.Tenant.Contracts\IX.Platform.Core.Tenant.Contracts.fsproj" />
+  </ItemGroup>
+
+</Project>

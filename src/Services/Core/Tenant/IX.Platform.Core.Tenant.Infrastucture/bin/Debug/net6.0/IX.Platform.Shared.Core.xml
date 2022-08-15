@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>IX.Platform.Shared.Core</name></assembly>
+<members>
+<member name="T:IX.Platform.Shared.Core.Converters.GuidConverter">
+<summary>
+ GUID converter
+</summary>
+</member>
+</members>
+</doc>
