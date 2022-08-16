@@ -44,7 +44,8 @@ module Program =
 
         let assemblies = AppDomain.CurrentDomain.GetAssemblies()
 
-        builder.Services.AddMediatR(assemblies);
+        builder.Services.AddAutoMapper(assemblies)
+        builder.Services.AddMediatR(assemblies)
 
         let defaultMsSqlConnection = "Data Source=localhost,1439;Initial Catalog=ixp-dev-db;User Id=sa;Password=mssql-password123;"
 

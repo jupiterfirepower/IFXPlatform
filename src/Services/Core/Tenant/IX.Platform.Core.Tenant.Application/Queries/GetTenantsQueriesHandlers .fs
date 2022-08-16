@@ -6,37 +6,34 @@ open IX.Platform.Core.Tenant.Contracts.Queries
 open IX.Platform.Core.Tenant.Contracts.Models
 open System
 open IX.Platform.Core.Tenant.Contracts
-
-//open IX.Platform.Core.Tenant.Contracts
+open AutoMapper
+open Microsoft.Extensions.Logging
 
 module Queries = 
 
-    type GetTenantQueryHandler(repository : ITenantRepository) =        
+    type GetTenantQueryHandler(repository : ITenantRepository, logger : ILogger<GetTenantQueryHandler>, mapper : IMapper) =        
          interface IRequestHandler<GetTenantQuery, TenantEntity> with
 
-            member this.Handle(request, cancellationToken) =
+            member _.Handle(request, cancellationToken) =
 
-                   Console.WriteLine($"GetTenantQueryHandler request.Id - {request.Gid}")
+                   logger.LogInformation($"GetTenantQueryHandler request.Gid - {request.Gid}")
+
                    let data = repository.GetByIdAsync(request.Gid) |> Async.RunSynchronously
-                   
 
-                   let result = { Gid = data.Result.Id; CompanyName = data.Result.CompanyName }
+                   let resultData = mapper.Map<TenantEntity>(data.Result)
 
-                   //let result = { Gid = Guid.NewGuid(); CompanyName = "test data 1" }
+                   task { return resultData }
 
-                   task { return result }
-
-    type GetTenantsQueryHandler(repository : ITenantRepository) =        
+    type GetTenantsQueryHandler(repository : ITenantRepository, logger : ILogger<GetTenantsQueryHandler>, mapper : IMapper) =        
          interface IRequestHandler<GetTenantsQuery, seq<TenantEntity>> with
 
-            member this.Handle(request, cancellationToken) =
+            member _.Handle(request, cancellationToken) =
+
+                   logger.LogInformation("GetTenantsQueryHandler called.")
 
                    let data = repository.GetAllAsync()
+                   let resultData = mapper.Map<seq<TenantEntity>>(data)
 
-                   let result = { Gid = Guid.NewGuid(); CompanyName = "test data 2" }
-
-                   let listResult = seq { result }
-
-                   task { return listResult }
+                   task { return resultData }
                    
                    

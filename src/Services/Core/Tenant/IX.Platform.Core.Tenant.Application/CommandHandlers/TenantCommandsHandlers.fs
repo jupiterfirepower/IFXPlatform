@@ -14,7 +14,7 @@ module CommandHandlers =
 
               member this.Handle(request, cancellationToken) =
 
-                   let result = { Gid = Guid.NewGuid(); CompanyName = request.CompanyName }
+                   let result = { Id = Guid.NewGuid(); CompanyName = request.CompanyName }
 
                    task { return result }
 
@@ -25,7 +25,7 @@ module CommandHandlers =
 
                    let data = repository.GetAllAsync()
 
-                   let result = { Gid = request.Id; CompanyName = request.CompanyName }
+                   let result = { Id = request.Id; CompanyName = request.CompanyName }
 
                    let listResult = seq { result }
 
