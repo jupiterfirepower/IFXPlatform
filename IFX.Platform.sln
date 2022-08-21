@@ -23,11 +23,15 @@ Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "IX.Platform.Microservice.Te
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deploy", "Deploy", "{EE4F3709-03AB-433D-B7AD-DBA5CCAFCC5B}"
 	ProjectSection(SolutionItems) = preProject
+		Deploy\build-container.ps1 = Deploy\build-container.ps1
 		Deploy\configuration-open-telemetry.yaml = Deploy\configuration-open-telemetry.yaml
 		Deploy\configuration-zipkin.yaml = Deploy\configuration-zipkin.yaml
 		Deploy\deploy-dapr.ps1 = Deploy\deploy-dapr.ps1
 		Deploy\deploy-open-telemetry.ps1 = Deploy\deploy-open-telemetry.ps1
+		Deploy\deploy-services.ps1 = Deploy\deploy-services.ps1
 		Deploy\deploy-zipkin.ps1 = Deploy\deploy-zipkin.ps1
+		Deploy\ifx.platform.gateways.admin.yaml = Deploy\ifx.platform.gateways.admin.yaml
+		Deploy\ifx.platform.microservice.tenant.yaml = Deploy\ifx.platform.microservice.tenant.yaml
 		Deploy\open-telemetry-collector.yaml = Deploy\open-telemetry-collector.yaml
 		Deploy\zipkin.yaml = Deploy\zipkin.yaml
 	EndProjectSection

@@ -4,6 +4,8 @@ open Microsoft.EntityFrameworkCore
 open IX.Platform.Shared.Data.Contexts
 open IX.Platform.Core.Tenant.Contracts.Entities
 open System
+open System.Linq
+open Microsoft.EntityFrameworkCore.SqlServer.Infrastructure.Internal
 
 module AppContext =
 
@@ -20,7 +22,10 @@ module AppContext =
        type TenantDbContext(options : DbContextOptions) =
             inherit BaseDbContext(options)
 
-            override x.OnConfiguring(options : DbContextOptionsBuilder) = options.UseSqlServer("Data Source=localhost,1439;Initial Catalog=ixp-dev-db;User Id=sa;Password=mssql-password123;") |> ignore
+            override x.OnConfiguring(options : DbContextOptionsBuilder) = if options.IsConfigured then
+                                                                             let opt = options.Options.Extensions.Last() :?> SqlServerOptionsExtension
+                                                                             options.UseSqlServer(opt.ConnectionString) |> ignore
+                                                                          base.OnConfiguring(options)
 
             override x.OnModelCreating(modelBuilder : ModelBuilder) = 
                      base.OnModelCreating(modelBuilder)

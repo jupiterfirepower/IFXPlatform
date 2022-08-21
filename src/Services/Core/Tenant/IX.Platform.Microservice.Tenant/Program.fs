@@ -12,6 +12,7 @@ open System.Text.Json.Serialization
 open IX.Platform.Core.Tenant.Contracts.Commands
 open IX.Platform.Core.Tenant.Application.CommandHandlers
 open IX.Platform.Core.Tenant.Contracts
+open IX.Platform.Shared.Core.Configurations
 
 #nowarn "20"
 open System
@@ -19,6 +20,7 @@ open Microsoft.AspNetCore.Builder
 open Microsoft.Extensions.DependencyInjection
 open Microsoft.Extensions.Hosting
 open MediatR
+open Microsoft.Extensions.Configuration
 
 module Program =
     let exitCode = 0
@@ -47,7 +49,7 @@ module Program =
         builder.Services.AddAutoMapper(assemblies)
         builder.Services.AddMediatR(assemblies)
 
-        let defaultMsSqlConnection = "Data Source=localhost,1439;Initial Catalog=ixp-dev-db;User Id=sa;Password=mssql-password123;"
+        let defaultMsSqlConnection = builder.Configuration.GetConnectionString("DefaultConnection")
 
         builder.Services.AddDbContext<TenantDbContext>
                  (fun (options : DbContextOptionsBuilder) -> 
@@ -66,6 +68,9 @@ module Program =
         builder.Services.AddScoped<IRequestHandler<UpdateTenantCommand, TenantEntity>, UpdateTenantCommandHandler>()
         builder.Services.AddScoped<IRequestHandler<DeleteTenantCommand, Guid>, DeleteTenantCommandHandler>()
 
+        //builder.Services.AddOptions()
+        //builder.Services.Configure<ConnectionStringsOptions>(builder.Configuration.GetSection("ConnectionStrings"))
+
         let app = builder.Build()
 
         //app.UseHttpsRedirection()
@@ -74,7 +79,6 @@ module Program =
         if app.Environment.IsDevelopment() then
            app.UseSwagger()
            app.UseSwaggerUI() |> ignore
-
 
         app.UseCloudEvents()
         app.UseAuthorization()

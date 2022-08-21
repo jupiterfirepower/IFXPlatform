@@ -10,6 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="Configurations\ConfigurationOptions.fs" />
     <Compile Include="Converters\GuidConverter.fs" />
     <Compile Include="Controllers\ApiController.fs" />
   </ItemGroup>

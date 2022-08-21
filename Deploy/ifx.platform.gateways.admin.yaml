@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: admin-micro
+  namespace: default
+  labels:
+    app: admin-micro
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: admin-micro
+  template:
+    metadata:
+      labels:
+        app: admin-micro
+      annotations:
+        dapr.io/enabled: "true"
+        dapr.io/app-id: "admin-micro"
+        dapr.io/app-port: "80"
+        dapr.io/log-level: "info"
+        dapr.io/sidecar-liveness-probe-period-seconds: "20"
+        dapr.io/sidecar-readiness-probe-period-seconds: "20"
+    spec:
+      containers:
+      - name: admin-micro
+        image: <registry>/ifx.platform.gateways.admin:2.0
+        ports:
+        - containerPort: 80
+        imagePullPolicy: Always

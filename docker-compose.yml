@@ -8,20 +8,17 @@ services:
       context: .
       dockerfile: src/Services/Core/Tenant/IX.Platform.Microservice.Tenant/Dockerfile
 
-  # RabbitMQ
-  rabbitmq:
-        image: masstransit/rabbitmq:latest
-        container_name: rabbitmq
-        ports:
-            - 5672:5672
-            - 15672:15672
-        restart: always
+  ix.platform.microservice.admin:
+    image: ${DOCKER_REGISTRY:-ix}/ix-platform-microservice-admin
+    build:
+      context: .
+      dockerfile: src/Gateways/IX.Platform.Gateways.Admin/Dockerfile
 
   # MS SQL Server
   mssqldb:
     image: "mcr.microsoft.com/mssql/server"
     environment:
-       SA_PASSWORD: "mssql-password123"
+       SA_PASSWORD: "mssql-password12345"
        ACCEPT_EULA: "Y"
     ports:
       - 1439:1433

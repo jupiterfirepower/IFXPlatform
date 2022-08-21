@@ -7,4 +7,9 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
       - "35000:80"
+  ix.platform.microservice.admin:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "39000:80"
   
