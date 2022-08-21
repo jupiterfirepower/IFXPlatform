@@ -24,6 +24,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deploy", "Deploy", "{EE4F3709-03AB-433D-B7AD-DBA5CCAFCC5B}"
 	ProjectSection(SolutionItems) = preProject
 		Deploy\build-container.ps1 = Deploy\build-container.ps1
+		Deploy\build-push-container.ps1 = Deploy\build-push-container.ps1
 		Deploy\configuration-open-telemetry.yaml = Deploy\configuration-open-telemetry.yaml
 		Deploy\configuration-zipkin.yaml = Deploy\configuration-zipkin.yaml
 		Deploy\deploy-dapr.ps1 = Deploy\deploy-dapr.ps1
@@ -33,6 +34,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deploy", "Deploy", "{EE4F37
 		Deploy\ifx.platform.gateways.admin.yaml = Deploy\ifx.platform.gateways.admin.yaml
 		Deploy\ifx.platform.microservice.tenant.yaml = Deploy\ifx.platform.microservice.tenant.yaml
 		Deploy\open-telemetry-collector.yaml = Deploy\open-telemetry-collector.yaml
+		Deploy\services.yaml = Deploy\services.yaml
 		Deploy\zipkin.yaml = Deploy\zipkin.yaml
 	EndProjectSection
 EndProject
