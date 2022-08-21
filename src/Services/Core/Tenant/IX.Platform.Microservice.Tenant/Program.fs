@@ -52,12 +52,7 @@ module Program =
         let defaultMsSqlConnection = builder.Configuration.GetConnectionString("DefaultConnection")
 
         builder.Services.AddDbContext<TenantDbContext>
-                 (fun (options : DbContextOptionsBuilder) -> 
-                   options.UseSqlServer
-                   //(defaultMsSqlConnection, ServiceLifetime.Scoped) 
-                   (defaultMsSqlConnection) 
-                   |> ignore) |> ignore
-
+                 (fun (options : DbContextOptionsBuilder) -> options.UseSqlServer(defaultMsSqlConnection) |> ignore ) |> ignore
 
         builder.Services.AddTransient<ITenantRepository, TenantRepository>()
 

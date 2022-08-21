@@ -7,7 +7,6 @@ open System.Collections.Generic
 
 module Repositories =
     type IRepository<'a> =
-      //interface
         abstract member All : unit -> seq<'a>
 
         abstract member GetAll : unit -> IQueryable<'a>
@@ -21,7 +20,6 @@ module Repositories =
         abstract member DeleteAsync : 'a -> Async<unit>
 
         abstract member GetByIdAsync: obj -> Async<ValueTask<'a>>
-      //end
 
     type Repository<'b when 'b : not struct>(dbContext : DbContext) =
       do
@@ -43,28 +41,28 @@ module Repositories =
           member x.GetAllAsync() = dbSet.ToListAsync()
 
           // add and return unit
-          member x.AddAsync(entity:'b) =
+          member x.AddAsync(entity : 'b) =
             async {
                 dbContext.AddAsync(entity) |> ignore
                 let! _ = dbContext.SaveChangesAsync true |> Async.AwaitTask
                 return ()
             }
           
-          member x.UpdateAsync(entity:'b) =
+          member x.UpdateAsync(entity : 'b) =
             async {
                 let trackingEntity = dbContext.Update(entity)
                 let! _ = dbContext.SaveChangesAsync true |> Async.AwaitTask
                 return ()
             }
 
-          member x.DeleteAsync(entity:'b) =
+          member x.DeleteAsync(entity : 'b) =
             async {
                 let trackingEntity = dbContext.Remove(entity)
                 let! _ = dbContext.SaveChangesAsync true |> Async.AwaitTask
                 return ()
             }
 
-          member x.GetByIdAsync(id:obj) =
+          member x.GetByIdAsync(id : obj) =
             async {
                 let result = dbSet.FindAsync(id);
                 return result
