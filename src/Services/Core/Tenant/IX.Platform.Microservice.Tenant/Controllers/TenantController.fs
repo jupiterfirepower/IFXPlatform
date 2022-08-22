@@ -19,11 +19,11 @@ type TenantController (logger : ILogger<TenantController>, provider : IServicePr
     member _.GetAllAsync([<FromQuery>] query: GetTenantsQuery, [<FromServices>] daprClient : DaprClient) = base.HandleAsync(query)
 
     [<HttpPost>]
-    member _.CreateAsync([<FromQuery>] command: CreateTenantCommand, [<FromServices>] daprClient : DaprClient) = base.HandleAsync(command)
+    member _.CreateAsync([<FromBody>] command: CreateTenantCommand, [<FromServices>] daprClient : DaprClient) = base.HandleAsync(command)
 
     [<HttpPut>]
-    member _.UpdateAsync([<FromQuery>] command: UpdateTenantCommand, [<FromServices>] daprClient : DaprClient) = base.HandleAsync(command)
+    member _.UpdateAsync([<FromBody>] command: UpdateTenantCommand, [<FromServices>] daprClient : DaprClient) = base.HandleAsync(command)
 
     [<HttpDelete>]
-    member _.DeleteAsync([<FromQuery>] command: DeleteTenantCommand, [<FromServices>] daprClient : DaprClient) = base.HandleAsync(command)
+    member _.DeleteAsync([<FromBody>] command: DeleteTenantCommand, [<FromServices>] daprClient : DaprClient) = base.HandleAsync(command)
         

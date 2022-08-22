@@ -35,16 +35,16 @@ type TenantController (logger : ILogger<TenantController>) =
         data.Result.result
 
     [<HttpPost>]
-    member _.CreateAsync([<FromQuery>] command: CreateTenantCommand, [<FromServices>] daprClient : DaprClient) =
+    member _.CreateAsync([<FromBody>] command: CreateTenantCommand, [<FromServices>] daprClient : DaprClient) =
            let data = daprClient.InvokeMethodAsync<CreateTenantCommand, RootResponse>(Net.Http.HttpMethod.Post, tenantMicroserviceName, tenantBaseApiUri + "Create", command)
            data.Result.result
 
     [<HttpPut>]
-    member _.UpdateAsync([<FromQuery>] command: UpdateTenantCommand, [<FromServices>] daprClient : DaprClient) =
+    member _.UpdateAsync([<FromBody>] command: UpdateTenantCommand, [<FromServices>] daprClient : DaprClient) =
            let data = daprClient.InvokeMethodAsync<UpdateTenantCommand, RootResponse>(Net.Http.HttpMethod.Post, tenantMicroserviceName, tenantBaseApiUri + "Update", command)
            data.Result.result
 
     [<HttpDelete>]
-    member _.DeleteAsync([<FromQuery>] command: DeleteTenantCommand, [<FromServices>] daprClient : DaprClient) =
+    member _.DeleteAsync([<FromBody>] command: DeleteTenantCommand, [<FromServices>] daprClient : DaprClient) =
            let data = daprClient.InvokeMethodAsync<DeleteTenantCommand, RootResponse>(Net.Http.HttpMethod.Post, tenantMicroserviceName, tenantBaseApiUri + "Update", command)
            data.Result.result
